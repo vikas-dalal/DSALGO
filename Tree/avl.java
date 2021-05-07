@@ -25,6 +25,13 @@ public class avl {
         node.height=Math.max(lh,rh)+1;
     }
 
+    public static TreeNode leftRotation(TreeNode node){
+        TreeNode b=node.left;
+        node.left=b.right;
+        b.right=node;
+        return b;
+    }
+
     
     public static TreeNode getRotation(TreeNode node){
         updateBalanceAndHeight(node);
